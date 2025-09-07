@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LIKITHA\\Documents\\CapstoneProject\\ShopeForHome\\ShopeForHome\\ShopeForHomeAPI\\ShopeForHomeAPI.csproj": {}
+    "C:\\Users\\LIKITHA\\Documents\\CapstoneProject\\ShopeForHome\\ShopeForHome\\Angular\\ShopForHomeUI\\ShopeForHomeAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LIKITHA\\Documents\\CapstoneProject\\ShopeForHome\\ShopeForHome\\ShopeForHomeAPI\\ShopeForHomeAPI.csproj": {
+    "C:\\Users\\LIKITHA\\Documents\\CapstoneProject\\ShopeForHome\\ShopeForHome\\Angular\\ShopForHomeUI\\ShopeForHomeAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LIKITHA\\Documents\\CapstoneProject\\ShopeForHome\\ShopeForHome\\ShopeForHomeAPI\\ShopeForHomeAPI.csproj",
+        "projectUniqueName": "C:\\Users\\LIKITHA\\Documents\\CapstoneProject\\ShopeForHome\\ShopeForHome\\Angular\\ShopForHomeUI\\ShopeForHomeAPI.csproj",
         "projectName": "ShopeForHomeAPI",
-        "projectPath": "C:\\Users\\LIKITHA\\Documents\\CapstoneProject\\ShopeForHome\\ShopeForHome\\ShopeForHomeAPI\\ShopeForHomeAPI.csproj",
+        "projectPath": "C:\\Users\\LIKITHA\\Documents\\CapstoneProject\\ShopeForHome\\ShopeForHome\\Angular\\ShopForHomeUI\\ShopeForHomeAPI.csproj",
         "packagesPath": "C:\\Users\\LIKITHA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LIKITHA\\Documents\\CapstoneProject\\ShopeForHome\\ShopeForHome\\ShopeForHomeAPI\\obj\\",
+        "outputPath": "C:\\Users\\LIKITHA\\Documents\\CapstoneProject\\ShopeForHome\\ShopeForHome\\Angular\\ShopForHomeUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
