@@ -1,0 +1,13 @@
+<div class="add-to-cart-wrapper" *ngIf="product">
+  <img [src]="product.imageUrl" alt="{{ product.name }}" />
+  <h3>{{ product.name }}</h3>
+  <p>₹{{ product.price }}</p>
+
+  <label for="quantity">Quantity:</label>
+  <input type="number" id="quantity" [(ngModel)]="quantity" min="1" />
+
+  <button (click)="addToCart()" [disabled]="added">
+    {{ added ? 'Added!' : 'Add to Cart' }}
+  </button>
+  <button (click)="close()">❌ Close</button>
+</div>

@@ -1,0 +1,37 @@
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+input[type="file"] {
+  padding: 8px;
+  border: 1px solid #ced6e0;
+  border-radius: 4px;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #3742fa;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #2ed573;
+  color: white;
+}
+
+.upload-message {
+  margin-top: 10px;
+  color: #2f3542;
+  font-weight: 500;
+}

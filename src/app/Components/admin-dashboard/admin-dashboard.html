@@ -1,0 +1,19 @@
+<div class="admin-wrapper">
+  <!-- Sidebar Navigation -->
+  <nav class="admin-sidebar">
+    <h2>🛠️ Admin Panel</h2>
+    <ul>
+      <li><a routerLink="product-management">Product Management</a></li>
+      <li><a routerLink="bulk-upload" routerLink="bulk-upload">Bulk Upload</a></li>
+      <li><a routerLink="stock-management">Stock Monitor</a></li>
+      <li><a  routerLink="sales-report">Sales Reports</a></li>
+      <li><a  routerLink="coupon-management">Coupon Management</a></li>
+      <li><a routerLink="/login">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main class="admin-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

@@ -1,0 +1,24 @@
+.order-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.order-items {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.order-items th, .order-items td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.empty-message {
+  font-style: italic;
+  color: #777;
+  margin-top: 24px;
+}

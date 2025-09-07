@@ -1,0 +1,23 @@
+.coupon-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  background-color: #f0fff0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.coupon-card.expired {
+  background-color: #fff0f0;
+  opacity: 0.7;
+}
+
+.expired-label {
+  color: red;
+  font-weight: bold;
+}
+
+.empty-message {
+  font-style: italic;
+  color: #777;
+}

@@ -1,0 +1,35 @@
+<div class="coupon-wrapper">
+  <h2>🎟️ Coupon Management</h2>
+
+  <div class="card">
+    <div class="form-group">
+      <label for="userId">🔍 User ID:</label>
+      <input id="userId" type="text" [(ngModel)]="selectedUserId" (blur)="loadUserCoupons()" placeholder="Enter User ID" />
+    </div>
+
+    <div class="form-group">
+      <label for="couponSelect">🎁 Select Coupon to Assign:</label>
+      <select id="couponSelect" [(ngModel)]="selectedCouponId">
+        <option *ngFor="let coupon of coupons" [value]="coupon.couponId">
+          {{ coupon.code }} - ₹{{ coupon.discountAmount }} (Expires: {{ coupon.expiryDate | date:'shortDate' }})
+        </option>
+      </select>
+      <button (click)="assignCoupon()">Assign Coupon</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🧾 Available Coupons</h3>
+    <ul class="coupon-list">
+      <li *ngFor="let coupon of coupons">
+        <div class="coupon-item">
+          <span class="coupon-code">{{ coupon.code }}</span>
+          <span class="coupon-details">₹{{ coupon.discountAmount }} | Expires: {{ coupon.expiryDate | date:'shortDate' }}</span>
+          <button class="btn-remove" (click)="removeCoupon(coupon.couponId)">Remove</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="message" class="error">{{ message }}</div>
+</div>

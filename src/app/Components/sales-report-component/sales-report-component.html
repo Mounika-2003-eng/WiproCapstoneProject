@@ -1,0 +1,39 @@
+<h2>📊 Sales Report</h2>
+
+<div class="date-range">
+  <label>From:</label>
+  <input type="date" [(ngModel)]="fromDate" />
+  <label>To:</label>
+  <input type="date" [(ngModel)]="toDate" />
+  <button (click)="fetchReport()">Generate Report</button>
+</div>
+
+<div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+<div *ngIf="report" class="report-card">
+  <div class="report-header">
+    <span class="report-date">
+      {{ report.fromDate | date:'mediumDate' }} → {{ report.toDate | date:'mediumDate' }}
+    </span>
+  </div>
+
+  <div class="report-grid">
+    <div class="report-item" style="background-color: blueviolet;">
+      <div class="icon">🧾</div>
+      <div class="label">Total Orders</div>
+      <div class="value">{{ report.totalOrders }}</div>
+    </div>
+
+    <div class="report-item" style="background-color: green;">
+      <div class="icon">💰</div>
+      <div class="label">Total Revenue</div>
+      <div class="value">₹{{ report.totalRevenue }}</div>
+    </div>
+
+    <div class="report-item" style="background-color: burlywood;">
+      <div class="icon">📦</div>
+      <div class="label">Products Sold</div>
+      <div class="value">{{ report.totalProductsSold }}</div>
+    </div>
+  </div>
+</div>

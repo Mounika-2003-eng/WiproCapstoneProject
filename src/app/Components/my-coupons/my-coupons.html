@@ -1,0 +1,12 @@
+<h2>🎁 My Coupons</h2>
+
+<div *ngIf="coupons.length === 0" class="empty-message">
+  <p>No coupons available.</p>
+</div>
+
+<div *ngFor="let coupon of coupons" class="coupon-card">
+  <h3><strong>Code: </strong>{{ coupon.code }}</h3>
+  <p><strong>Discount:</strong> ₹{{ coupon.discountAmount }}</p>
+  <p><strong>Expires:</strong> {{ coupon.expiryDate | date:'mediumDate' }}</p>
+  <!-- <p *ngIf="!coupon.isActive" class="expired-label">Expired</p> -->
+</div>

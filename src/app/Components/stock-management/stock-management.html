@@ -1,0 +1,28 @@
+<h2>📦 Stock Management</h2>
+
+<table class="stock-table">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <!-- <th>Category</th> -->
+      <th>Stock</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of stockList">
+      <td>{{ item.name }}</td>
+      <!-- <td>{{ item.category.categoryName }}</td> -->
+      <td>
+        <span *ngIf="!editMode[item.productId]">{{ item.stock }}</span>
+        <input *ngIf="editMode[item.productId]" type="number" [(ngModel)]="updatedStock[item.productId]" />
+      </td>
+      <td>
+        <button *ngIf="!editMode[item.productId]" (click)="enableEdit(item.productId, item.stock)">Edit</button>
+        <button *ngIf="editMode[item.productId]" (click)="saveStock(item.productId)">Save</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="message" class="error">{{ message }}</div>

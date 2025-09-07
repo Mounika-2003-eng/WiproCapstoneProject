@@ -1,0 +1,104 @@
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #2f3542;
+  font-weight: 600;
+}
+
+.date-range {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.date-range label {
+  font-weight: 500;
+  color: #57606f;
+}
+
+.date-range input[type="date"] {
+  padding: 8px;
+  border: 1px solid #ced6e0;
+  border-radius: 4px;
+  background-color: #f1f2f6;
+  font-size: 14px;
+}
+
+.date-range button {
+  padding: 8px 16px;
+  background-color: #3742fa;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.date-range button:hover {
+  background-color: #2f3eff;
+}
+
+.error {
+  color: #e74c3c;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.report-card {
+ 
+ 
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  max-width: 600px;
+}
+
+.report-header {
+  font-size: 16px;
+  font-size:large;
+  font-weight: 500;
+  color: #0f7716;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.report-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.report-item {
+  flex: 1;
+  min-width: 160px;
+  background-color: #f1f2f6;
+  border-radius: 6px;
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.report-item:hover {
+  transform: translateY(-2px);
+}
+
+.icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.label {
+  font-size: 14px;
+  color: #fbfcfd;
+  margin-bottom: 4px;
+}
+
+.value {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2f3542;
+}

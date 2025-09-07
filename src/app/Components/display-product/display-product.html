@@ -1,0 +1,31 @@
+<div class="product-card">
+  <img [src]="product.imageUrl" alt="{{ product.name }}" />
+
+  <h3 class="product-name">{{ product.name }}</h3>
+  <p class="product-description">{{ product.description }}</p>
+
+  <div class="product-meta">
+    <span class="rating">⭐ {{ product.rating }}</span>
+    <span class="price">₹{{ product.price }}</span>
+  </div>
+
+  <div class="product-actions">
+    <ng-container *ngIf="!isWishlisted; else goToWishlist">
+  <button class="action-btn" (click)="addToWishlist()" style="background-color: var(--primary-color);">Add to Wishlist</button>
+</ng-container>
+
+<ng-template #goToWishlist>
+  <button class="action-btn"style="background-color: rgb(229, 168, 225);" [routerLink]="['/user_dashboard/wishlist']">Go to Wishlist</button>
+</ng-template>
+
+
+    <ng-container *ngIf="!isInCart; else goToCart">
+      <button class="action-btn" (click)="openAddToCart()" style="background-color: var(--primary-color);">Add to Cart</button>
+    </ng-container>
+
+    <ng-template #goToCart>
+      <button class="action-btn" [routerLink]="['/user_dashboard/cart']" style="background-color: rgb(229, 168, 225);">Go to Cart</button>
+    </ng-template>
+
+  </div>
+</div>

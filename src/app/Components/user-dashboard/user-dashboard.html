@@ -1,0 +1,26 @@
+<div id="user-dashboard-wrapper">
+  <nav class="navbar">
+    <div class="nav-left">
+      <a routerLink="products" class="nav-link">🛍️ Products</a>
+      <a routerLink="wishlist" class="nav-link">💖 Wishlist</a>
+    </div>
+
+    <div class="nav-right">
+      <a routerLink="cart" class="cart-icon" title="Cart">🛒</a>
+
+      <div class="profile-menu">
+        <button class="profile-icon" (click)="toggleDropdown()" title="Profile" style="color: white; background-color: aliceblue; border-radius: 50%; height: 30px;" >👤</button>
+        <ul *ngIf="dropdownOpen" class="dropdown">
+          <li><a routerLink="my-orders">Orders</a></li>
+          <li><a routerLink="wishlist">Wishlist</a></li>
+          <li><a routerLink="my-coupons">MyCoupons</a></li>
+          <li><a routerLink="/login">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="dashboard-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

@@ -1,0 +1,89 @@
+
+
+.register-container {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #e4bfce;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#register-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.form-input,
+.form-select {
+  padding: 10px;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.form-input:focus,
+.form-select:focus {
+  border-color: var(--input-focus);
+  outline: none;
+}
+
+.btn-primary {
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-link {
+  margin-top: 20px;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .register-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .form-input,
+  .form-select,
+  .btn-primary {
+    font-size: 16px;
+  }
+}
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 4px;
+  display: block;
+}
+

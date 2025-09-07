@@ -1,0 +1,30 @@
+<!-- <div class="product-grid">
+  <app-display-product *ngFor="let product of products" [product]="product"></app-display-product>
+</div> -->
+<form [formGroup]="filterForm" (ngSubmit)="applyFilters()" class="filter-toolbar">
+  <select formControlName="category" class="filter-select">
+    <option value="">All Categories</option>
+    <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+  </select>
+
+  <input formControlName="minPrice" type="number" placeholder="Min Price" />
+  <input formControlName="maxPrice" type="number" placeholder="Max Price" />
+  <input formControlName="minRating" type="number" step="0.1" placeholder="Min Rating" />
+  <button type="submit">Filter</button>
+</form>
+
+
+<!-- Product Grid -->
+<div class="product-grid">
+  <div *ngFor="let product of products$ | async">
+    <app-display-product [product]="product"></app-display-product>
+  </div>
+</div>
+
+<!-- Modal Popup -->
+<div class="modal-backdrop" *ngIf="selectedProduct">
+  <div class="modal-content">
+    <app-add-to-cart [product]="selectedProduct"></app-add-to-cart>
+    <button class="close-btn" (click)="selectedProduct = null">❌</button>
+  </div>
+</div>

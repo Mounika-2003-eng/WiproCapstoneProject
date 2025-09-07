@@ -1,0 +1,38 @@
+.stock-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+input[type="number"] {
+  width: 80px;
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #ced6e0;
+}
+
+button {
+  padding: 6px 12px;
+  margin-left: 4px;
+  border: none;
+  border-radius: 4px;
+  background-color: #3742fa;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2f3eff;
+}
+
+.error {
+  color: #e74c3c;
+  font-weight: 500;
+  margin-top: 12px;
+}

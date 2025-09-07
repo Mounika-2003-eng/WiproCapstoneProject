@@ -1,0 +1,14 @@
+<h2>📦 Bulk Product Upload</h2>
+
+<div class="upload-container">
+    <button class="btn-secondary" (click)="downloadTemplate()">Download CSV Template</button>
+
+    <input id="csvFileInput" type="file" accept=".csv" (change)="onFileSelected($event)" />
+
+    <button class="btn-primary" (click)="uploadFile()">
+        Bulk Upload 
+    </button>
+
+
+    <div class="upload-message" *ngIf="uploadMessage">{{ uploadMessage }}</div>
+</div>

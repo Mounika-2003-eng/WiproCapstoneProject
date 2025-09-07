@@ -1,0 +1,31 @@
+<h2>Your Cart</h2>
+
+<div *ngIf="cartItems.length === 0">🛒 Your cart is empty.</div>
+
+<div *ngIf="cartItems.length > 0" class="cart-container">
+  <div *ngFor="let item of cartItems" class="cart-item">
+    <img [src]="item.imageUrl" alt="{{ item.productName }}" />
+    <div class="details">
+      <h4>{{ item.productName }}</h4>
+      <p>₹{{ item.price }} x {{ item.quantity }}</p>
+      <div class="actions">
+        <input type="number" [value]="item.quantity" (change)="updateQuantity(item.id!, +$event.target.value)"
+          min="1" />
+        <button (click)="removeItem(item.id!)">Remove</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="cart-summary">
+    <div class="coupon-section">
+      <input type="text" [(ngModel)]="couponCode" placeholder="Enter coupon code" />
+      <button (click)="fetchDiscountedPrice()">Apply Coupon</button>
+      <p class="discount-message" *ngIf="discountMessage" style="background-color: yellow;">{{ discountMessage }}</p>
+    </div>
+
+    <p><strong>Total:</strong> ₹{{ getTotal() }}</p>
+    <button (click)="clearCart()">Clear Cart</button>
+    <button (click)="placeOrder()">Place Order</button>
+  </div>
+</div>
